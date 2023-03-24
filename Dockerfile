@@ -1,5 +1,5 @@
 # FROM ubuntu:latest
-FROM python:alpine3.16 AS builder
+FROM python:alpine3.16 AS cron
 WORKDIR /app
 
 COPY . /app
@@ -12,7 +12,7 @@ COPY Docker_Requirement/update_news.sh .
 RUN chmod 0644 /etc/cron.d/cron_task
 RUN chmod +x update_news.sh
 RUN crontab /etc/cron.d/cron_task
-RUN python manage.py migrate
+# RUN python manage.py migrate
 
 ENTRYPOINT [ "crond", "-f" ]
 
