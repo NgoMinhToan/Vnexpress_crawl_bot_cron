@@ -23,10 +23,8 @@ pip install -r requirements.txt
 
 ```
 
-# Auto Update with docker cron
 
-
-# ENVIRONMENT
+# Environment
 1. APP_SECRET_KEY: Random sercret key
 2. DB_URI: mongo database URI
 3. DB_NAME: mongo database name
