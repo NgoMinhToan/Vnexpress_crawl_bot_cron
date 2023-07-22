@@ -50,5 +50,5 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/vnexpress_crawl_bot_crond:latest
-            ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/app:latest
-            ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/app:1.0.0
+            ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/vnexpress_crawl_bot_crond:latest
+            ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/vnexpress_crawl_bot_crond:1.0.0
