@@ -52,5 +52,10 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/vnexpress_crawl_bot_crond:latest
-            ghcr.io/mtoan/vnexpress_crawl_bot_crond:latest
-            ghcr.io/mtoan/vnexpress_crawl_bot_crond:1.0.0
+            ghcr.io/ngominhtoan/vnexpress_crawl_bot_crond:latest
+            ghcr.io/ngominhtoan/vnexpress_crawl_bot_crond:1.0.0
+        
+      - name: 'Build Inventory Image'
+        run: |
+            docker build . --tag ghcr.io/ngominhtoan/store:latest
+            docker push ghcr.io/ngominhtoan/store:latest
